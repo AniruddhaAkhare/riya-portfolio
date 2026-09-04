@@ -1,0 +1,23 @@
+# Dependencies
+node_modules
+/.pnp
+.pnp.js
+
+# Production
+dist
+build
+
+# Large media / scratch archives
+*.zip
+video_frames_compressed/
+public/high_res_frames/
+test_vite/
+
+# Environment and IDE
+.env
+.env.local
+.env.*.local
+.vscode
+.idea
+.DS_Store
+Thumbs.db
