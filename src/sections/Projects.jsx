@@ -11,53 +11,66 @@ const Projects = () => {
       id: "machinaoracle",
       tab: "✦ PROJECT 01",
       tabColor: "#FFE500",
-      title: "MachinaOracle",
+      title: "machinaoracle",
       description: "AI-powered predictive maintenance with RAG & anomaly detection.",
       detailedDesc: "An industrial AI predictive maintenance pipeline designed to ingest continuous machine telemetry, IoT logs, and vibrational sensors. Leverages RAG over historical failure manuals to provide zero-shot root cause diagnostics and failure prevention.",
-      tags: ["Python", "RAG", "LangChain", "LLM"],
-      image: "/project_machinaoracle.jpg",
+      tags: ["Python", "PyTorch", "FastAPI", "RAG", "React"],
+      image: "/card_machinaoracle.jpg",
       metrics: "94% Failure Prediction Accuracy",
-      live: "https://github.com/riya-umekar/MachinaOracle",
-      github: "https://github.com/riya-umekar/MachinaOracle"
+      live: "https://machina-oracle-eight.vercel.app/",
+      github: "https://github.com/Riaa-stack"
     },
     {
-      id: "synapse-ai-copilot",
+      id: "railmind-ai",
       tab: "✦ PROJECT 02",
       tabColor: "#A7F3D0",
-      title: "Synapse AI Copilot",
-      description: "Conversational AI assistant with RAG, tools & memory.",
-      detailedDesc: "A multi-source enterprise conversational assistant integrating document repositories, email threads, and codebases into an intelligent conversational graph with sub-second semantic retrieval and hallucination mitigation.",
-      tags: ["RAG", "Agents", "LLM", "Python"],
-      image: "/project_synapse_ai.jpg",
-      metrics: "Sub-second RAG Retrieval",
-      live: "https://github.com/riya-umekar/Synapse-AI",
-      github: "https://github.com/riya-umekar/Synapse-AI"
+      title: "railmind AI",
+      description: "Intelligent railway telemetry analytics & automated transit optimization.",
+      detailedDesc: "An intelligent railway system leveraging AI and real-time transit telemetry for predictive diagnostics, scheduling optimization, safety monitoring, and rail network efficiency.",
+      tags: ["AI/ML", "FastAPI", "Python", "React", "Predictive Analytics"],
+      image: "/card_railmind.jpg",
+      metrics: "Real-time Rail Diagnostics & Scheduling",
+      live: "https://railmind-ai-eta.vercel.app/",
+      github: "https://github.com/Riaa-stack"
     },
     {
-      id: "neuralvision",
+      id: "teachbot-ai",
       tab: "✦ PROJECT 03",
       tabColor: "#FDA4AF",
-      title: "NeuralVision",
-      description: "AI vision system for object detection & smart analytics.",
-      detailedDesc: "Real-time computer vision studio utilizing YOLOv8 and custom CNNs for spatial tracking, multi-camera density heatmaps, and live stream telemetry diagnostics for smart city surveillance.",
-      tags: ["YOLOv8", "OpenCV", "FastAPI", "React"],
-      image: "/project_neuralvision.jpg",
-      metrics: "60+ FPS Real-time Stream Analytics",
-      live: "https://github.com/riya-umekar/NeuralVision",
-      github: "https://github.com/riya-umekar/NeuralVision"
+      title: "teachbot AI",
+      description: "Intelligent educational AI agent & final-year interactive tutoring platform.",
+      detailedDesc: "Interactive AI education platform and smart tutor built as a flagship final-year engineering project. Provides intelligent curriculum navigation, real-time code and theory explanations, adaptive quizzes, and student progress telemetry.",
+      tags: ["Generative AI", "LLMs", "RAG", "React", "FastAPI"],
+      image: "/card_teachbot.jpg",
+      metrics: "Adaptive Interactive Tutoring",
+      live: "https://riya-final-year-project.vercel.app",
+      github: "https://github.com/Riaa-stack"
     },
     {
-      id: "agenticdev",
+      id: "travel-planner-agent",
       tab: "✦ PROJECT 04",
       tabColor: "#FDBA74",
-      title: "AgenticDev Studio",
-      description: "Multi-agent dev environment for autonomous task execution.",
-      detailedDesc: "Visual node-based IDE for building and orchestrating autonomous LLM multi-agent graphs with sandboxed code execution, memory stores, and self-debugging reflection loops.",
-      tags: ["Agents", "LangChain", "Tools", "Python"],
-      image: "/project_agenticdev.jpg",
-      metrics: "Zero-Latency Agent Loops",
-      live: "https://github.com/riya-umekar/AgenticDev-Studio",
-      github: "https://github.com/riya-umekar/AgenticDev-Studio"
+      title: "AI Travel planner Agent",
+      description: "Autonomous multi-agent itinerary planner synthesizing routes & personalized schedules.",
+      detailedDesc: "An autonomous multi-agent travel architecture that coordinates specialized sub-agents for destination discovery, flight and hotel price scouting, itinerary optimization, and personalized dynamic travel recommendations.",
+      tags: ["Agentic AI", "LangChain", "Multi-Agent", "Python", "FastAPI"],
+      image: "/card_travel_planner.jpg",
+      metrics: "Multi-Agent Travel Synthesis",
+      live: null,
+      github: "https://github.com/Riaa-stack"
+    },
+    {
+      id: "eduarchive-ai",
+      tab: "✦ PROJECT 05",
+      tabColor: "#DDD6FE",
+      title: "Eduarchive AI",
+      description: "Smart RAG model for exam preparation based on question paper vault & notes.",
+      detailedDesc: "Smart RAG-powered exam preparation assistant that semantic-indexes university question paper vaults, previous years' exams, and comprehensive lecture notes. Generates predictive exam questions, high-yield topic summaries, and automated answer grading.",
+      tags: ["Smart RAG", "ChromaDB", "Vector Search", "LLMs", "Python"],
+      image: "/card_eduarchive.jpg",
+      metrics: "Question Vault Semantic RAG",
+      live: null,
+      github: "https://github.com/Riaa-stack"
     }
   ];
 
@@ -128,11 +141,11 @@ const Projects = () => {
             </motion.div>
           </div>
 
-          {/* 4 Project Cards in Horizontal Grid */}
+          {/* Project Cards in Adaptive Grid */}
           <div 
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(4, 1fr)',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
               gap: '1.25rem',
               alignItems: 'stretch'
             }}
@@ -292,24 +305,44 @@ const Projects = () => {
                       paddingTop: '0.75rem'
                     }}
                   >
-                    <a 
-                      href={project.live}
-                      target="_blank"
-                      rel="noreferrer"
-                      style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '0.3rem',
-                        fontSize: '0.75rem',
-                        fontWeight: 900,
-                        color: '#121212',
-                        textTransform: 'uppercase'
-                      }}
-                      className="project-link"
-                    >
-                      <ExternalLink size={14} />
-                      <span>LIVE DEMO</span>
-                    </a>
+                    {project.live ? (
+                      <a 
+                        href={project.live}
+                        target="_blank"
+                        rel="noreferrer"
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '0.3rem',
+                          fontSize: '0.75rem',
+                          fontWeight: 900,
+                          color: '#121212',
+                          textTransform: 'uppercase'
+                        }}
+                        className="project-link"
+                      >
+                        <ExternalLink size={14} />
+                        <span>LIVE DEMO</span>
+                      </a>
+                    ) : (
+                      <span 
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '0.25rem',
+                          fontSize: '0.68rem',
+                          fontWeight: 900,
+                          color: '#B45309',
+                          backgroundColor: '#FEF3C7',
+                          border: '1px solid #FCD34D',
+                          padding: '0.15rem 0.45rem',
+                          borderRadius: '4px',
+                          textTransform: 'uppercase'
+                        }}
+                      >
+                        🚀 COMING SOON
+                      </span>
+                    )}
 
                     <a 
                       href={project.github}
@@ -445,7 +478,17 @@ const Projects = () => {
               </div>
 
               {/* Action Buttons */}
-              <div style={{ display: 'flex', gap: '1rem' }}>
+              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                {activeModalProject.live && (
+                  <a 
+                    href={activeModalProject.live} 
+                    target="_blank" 
+                    rel="noreferrer"
+                    className="btn-brutal btn-brutal-blue"
+                  >
+                    <ExternalLink size={16} /> LIVE DEMO
+                  </a>
+                )}
                 <a 
                   href={activeModalProject.github} 
                   target="_blank" 

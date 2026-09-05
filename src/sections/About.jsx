@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Heart, Coffee, Sparkles } from 'lucide-react';
-import StickerStampBar from '../components/StickerStampBar';
+import ExtraCurricularMap from '../components/ExtraCurricularMap';
 
 const stampSkills = [
   { label: "PROBLEM SOLVER", color: "#FFE500" },
@@ -11,15 +11,23 @@ const stampSkills = [
   { label: "LIFELONG LEARNER", color: "#DDD6FE" }
 ];
 
-const About = () => {
-  const [activeSticky, setActiveSticky] = useState(0);
+const geekThoughts = [
+  "Why do programmers prefer dark mode? Because light attracts bugs 🪲",
+  "There are only 10 types of people in the world: those who understand binary, and those who don't ⚡",
+  "'It works on my machine' is a valid deployment strategy until Docker enters the chat 🐳",
+  "Recursion: To understand recursion, you must first understand recursion 🔄",
+  "A SQL query walks into a bar, strolls up to two tables and asks: 'Can I join you?' 🍺",
+  "99 little bugs in the code, fix one down, patch it around, 127 little bugs in the code 🐛",
+  "Neural networks are just matrix multiplications having a profound existential crisis 🧠",
+  "Code never lies, comments sometimes do. Clean architecture is self-documenting art ⚡",
+  "First, solve the problem. Then, write the code — John Johnson 💡",
+  "Premature optimization is the root of all evil — Donald Knuth ⏱️",
+  "Git commit -m 'Fixed it for real this time' is an emotional roller coaster 🎢",
+  "Give someone a program and you frustrate them for a day; teach them to program and you frustrate them for a lifetime 💻"
+];
 
-  const stickyNotes = [
-    "Currently building: Autonomous RAG agents with LangGraph 🤖",
-    "Favorite book: Designing Data-Intensive Applications 📚",
-    "Go-to stack: React + FastAPI + PyTorch + ChromaDB ⚡",
-    "Daily fuel: 2 cups of filter coffee & Lo-fi beats ☕"
-  ];
+const About = () => {
+  const [activeThought, setActiveThought] = useState(0);
 
   return (
     <section 
@@ -230,30 +238,59 @@ const About = () => {
               ))}
             </div>
 
-            {/* Interactive Sticky Snippet Switcher */}
-            <div 
-              onClick={() => setActiveSticky((activeSticky + 1) % stickyNotes.length)}
+            {/* Interactive Thoughts Section with Coding & Geek Wit */}
+            <motion.div 
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={() => setActiveThought((activeThought + 1) % geekThoughts.length)}
               style={{
                 marginTop: '1.25rem',
-                padding: '0.5rem 0.85rem',
+                padding: '0.65rem 0.95rem',
                 backgroundColor: 'var(--bg-paper)',
-                border: '1.5px dashed #121212',
-                borderRadius: '6px',
+                border: '2px dashed #121212',
+                borderRadius: '8px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'space-between',
+                gap: '0.75rem',
                 cursor: 'pointer',
-                userSelect: 'none'
+                userSelect: 'none',
+                boxShadow: '2px 2px 0 #121212'
               }}
-              title="Click to see another note!"
+              title="Click to see another geek thought!"
             >
-              <div style={{ fontSize: '0.82rem', fontWeight: 700, color: '#121212' }}>
-                <span style={{ color: '#2563EB', fontWeight: 900 }}>NOTE:</span> {stickyNotes[activeSticky]}
+              <div style={{ fontSize: '0.84rem', fontWeight: 700, color: '#121212', display: 'flex', alignItems: 'center', gap: '0.45rem', flexWrap: 'wrap' }}>
+                <span 
+                  style={{ 
+                    backgroundColor: '#FFE500', 
+                    color: '#121212', 
+                    border: '1.5px solid #121212',
+                    padding: '0.1rem 0.45rem', 
+                    borderRadius: '4px',
+                    fontWeight: 900,
+                    fontSize: '0.72rem',
+                    letterSpacing: '0.04em'
+                  }}
+                >
+                  THOUGHTS 💭
+                </span>
+                <span>{geekThoughts[activeThought]}</span>
               </div>
-              <div style={{ fontSize: '0.7rem', fontWeight: 900, color: '#6B7280' }}>
+              <div 
+                style={{ 
+                  fontSize: '0.68rem', 
+                  fontWeight: 900, 
+                  color: '#2563EB', 
+                  whiteSpace: 'nowrap',
+                  backgroundColor: '#EFF6FF',
+                  padding: '0.2rem 0.5rem',
+                  borderRadius: '4px',
+                  border: '1px solid #BFDBFE'
+                }}
+              >
                 CLICK FOR MORE ➔
               </div>
-            </div>
+            </motion.div>
 
           </motion.div>
 
@@ -339,8 +376,8 @@ const About = () => {
 
         </div>
 
-        {/* Interactive Sticker Stamp Reaction Bar */}
-        <StickerStampBar />
+        {/* Extra Curricular Feats Treasure Map Section */}
+        <ExtraCurricularMap />
 
       </div>
 

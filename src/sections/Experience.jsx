@@ -35,80 +35,159 @@ const ExperienceEducationAchievements = () => {
                 letterSpacing: '0.04em'
               }}
             >
-              EXPERIENCE →
+              💼 EXPERIENCE →
             </h3>
 
-            {/* Timeline Item */}
-            <motion.div 
-              whileHover={{ x: 3 }}
-              style={{ position: 'relative', paddingLeft: '1.5rem' }}
-            >
-              {/* Vertical Guide Line */}
-              <div 
-                style={{
-                  position: 'absolute',
-                  left: '5px',
-                  top: '8px',
-                  bottom: '0',
-                  width: '2px',
-                  backgroundColor: '#E5E7EB'
-                }}
-              />
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.75rem' }}>
+              {/* Internship 1: Fireblaze AI School */}
+              <motion.div 
+                whileHover={{ x: 3 }}
+                style={{ position: 'relative', paddingLeft: '1.5rem' }}
+              >
+                {/* Vertical Guide Line */}
+                <div 
+                  style={{
+                    position: 'absolute',
+                    left: '5px',
+                    top: '8px',
+                    bottom: '-25px',
+                    width: '2px',
+                    backgroundColor: '#E5E7EB'
+                  }}
+                />
 
-              {/* Yellow Dot with Glow Pulse */}
-              <div 
-                style={{
-                  position: 'absolute',
-                  left: '0px',
-                  top: '5px',
-                  width: '12px',
-                  height: '12px',
-                  borderRadius: '50%',
-                  backgroundColor: '#FFE500',
-                  border: '2px solid #121212',
-                  boxShadow: '0 0 6px rgba(255, 229, 0, 0.6)'
-                }}
-              />
+                {/* Yellow Dot with Glow Pulse */}
+                <div 
+                  style={{
+                    position: 'absolute',
+                    left: '0px',
+                    top: '5px',
+                    width: '12px',
+                    height: '12px',
+                    borderRadius: '50%',
+                    backgroundColor: '#FFE500',
+                    border: '2px solid #121212',
+                    boxShadow: '0 0 6px rgba(255, 229, 0, 0.6)'
+                  }}
+                />
 
-              {/* Role & Company with Fireblaze logo badge */}
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '0.5rem' }}>
-                <div>
-                  <h4 style={{ fontFamily: 'var(--font-heading)', fontSize: '0.98rem', fontWeight: 900, color: '#121212', lineHeight: 1.2 }}>
-                    Full Stack Developer Intern
-                  </h4>
-                  <div style={{ fontSize: '0.82rem', fontWeight: 800, color: '#4B5563', margin: '0.15rem 0' }}>
-                    Fireblaze AI School
+                {/* Role & Company with Fireblaze logo badge */}
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '0.5rem', marginBottom: '0.4rem' }}>
+                  <div>
+                    <h4 style={{ fontFamily: 'var(--font-heading)', fontSize: '0.98rem', fontWeight: 900, color: '#121212', lineHeight: 1.2 }}>
+                      Full Stack Developer Intern
+                    </h4>
+                    <div style={{ fontSize: '0.84rem', fontWeight: 800, color: '#2563EB', margin: '0.15rem 0' }}>
+                      Fireblaze AI School
+                    </div>
+                    <div style={{ fontSize: '0.74rem', fontWeight: 700, color: '#6B7280' }}>
+                      June 2025 – December 2025
+                    </div>
                   </div>
-                  <div style={{ fontSize: '0.74rem', fontWeight: 700, color: '#6B7280', marginBottom: '0.65rem' }}>
-                    Jun 2025 – Dec 2025
-                  </div>
+
+                  {/* Fireblaze Stylized Badge with Hover Wiggle */}
+                  <motion.div 
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    style={{
+                      backgroundColor: '#FFEBE8',
+                      border: '1.5px solid #FF4B3A',
+                      borderRadius: '4px',
+                      padding: '0.2rem 0.45rem',
+                      textAlign: 'center',
+                      flexShrink: 0,
+                      boxShadow: '2px 2px 0 rgba(255, 75, 58, 0.2)'
+                    }}
+                  >
+                    <div style={{ fontSize: '0.8rem' }}>🔥</div>
+                    <div style={{ fontSize: '0.52rem', fontWeight: 900, color: '#FF4B3A', lineHeight: 1 }}>FIREBLAZE</div>
+                  </motion.div>
                 </div>
 
-                {/* Fireblaze Stylized Badge with Hover Wiggle */}
-                <motion.div 
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  style={{
-                    backgroundColor: '#FFEBE8',
-                    border: '1.5px solid #FF4B3A',
-                    borderRadius: '4px',
-                    padding: '0.25rem 0.5rem',
-                    textAlign: 'center',
-                    flexShrink: 0,
-                    boxShadow: '2px 2px 0 rgba(255, 75, 58, 0.2)',
-                    cursor: 'pointer'
-                  }}
-                >
-                  <div style={{ fontSize: '0.85rem' }}>🔥</div>
-                  <div style={{ fontSize: '0.55rem', fontWeight: 900, color: '#FF4B3A', lineHeight: 1 }}>FIREBLAZE</div>
-                  <div style={{ fontSize: '0.48rem', fontWeight: 700, color: '#6B7280', lineHeight: 1 }}>AI SCHOOL</div>
-                </motion.div>
-              </div>
+                {/* Bullet Points */}
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+                  {[
+                    "Developed responsive web applications using React and TypeScript",
+                    "Worked across frontend, backend and database development",
+                    "Implemented application features and integrations",
+                    "Worked with real-time database functionality",
+                    "Focused on application performance and development"
+                  ].map((bullet, bIdx) => (
+                    <li key={bIdx} style={{ fontSize: '0.8rem', lineHeight: 1.45, color: '#374151', fontWeight: 600, display: 'flex', alignItems: 'flex-start', gap: '0.4rem' }}>
+                      <span style={{ color: '#FF4B3A', fontWeight: 900, lineHeight: 1 }}>•</span>
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
 
-              {/* Description */}
-              <p style={{ fontSize: '0.84rem', lineHeight: 1.55, color: '#374151', fontWeight: 500 }}>
-                Built full-stack applications, real-time features, integrated AI solutions & optimized performance across products.
-              </p>
-            </motion.div>
+              {/* Internship 2: Infosys Springboard 6.0 */}
+              <motion.div 
+                whileHover={{ x: 3 }}
+                style={{ position: 'relative', paddingLeft: '1.5rem' }}
+              >
+                {/* Blue Dot with Glow Pulse */}
+                <div 
+                  style={{
+                    position: 'absolute',
+                    left: '0px',
+                    top: '5px',
+                    width: '12px',
+                    height: '12px',
+                    borderRadius: '50%',
+                    backgroundColor: '#2563EB',
+                    border: '2px solid #121212',
+                    boxShadow: '0 0 6px rgba(37, 99, 235, 0.6)'
+                  }}
+                />
+
+                {/* Role & Company with Infosys logo badge */}
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '0.5rem', marginBottom: '0.4rem' }}>
+                  <div>
+                    <h4 style={{ fontFamily: 'var(--font-heading)', fontSize: '0.98rem', fontWeight: 900, color: '#121212', lineHeight: 1.2 }}>
+                      AI & Machine Learning Intern
+                    </h4>
+                    <div style={{ fontSize: '0.84rem', fontWeight: 800, color: '#2563EB', margin: '0.15rem 0' }}>
+                      Infosys Springboard 6.0
+                    </div>
+                    <div style={{ fontSize: '0.74rem', fontWeight: 700, color: '#6B7280' }}>
+                      August 2025 – October 2025
+                    </div>
+                  </div>
+
+                  {/* Infosys Stylized Badge */}
+                  <motion.div 
+                    whileHover={{ scale: 1.1, rotate: -5 }}
+                    style={{
+                      backgroundColor: '#EFF6FF',
+                      border: '1.5px solid #2563EB',
+                      borderRadius: '4px',
+                      padding: '0.2rem 0.45rem',
+                      textAlign: 'center',
+                      flexShrink: 0,
+                      boxShadow: '2px 2px 0 rgba(37, 99, 235, 0.2)'
+                    }}
+                  >
+                    <div style={{ fontSize: '0.8rem' }}>⚡</div>
+                    <div style={{ fontSize: '0.52rem', fontWeight: 900, color: '#2563EB', lineHeight: 1 }}>INFOSYS</div>
+                  </motion.div>
+                </div>
+
+                {/* Bullet Points */}
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+                  {[
+                    "Worked on Artificial Intelligence and Machine Learning",
+                    "Built and explored ML models",
+                    "Performed data preprocessing",
+                    "Worked on AI-driven solutions for real-world applications."
+                  ].map((bullet, bIdx) => (
+                    <li key={bIdx} style={{ fontSize: '0.8rem', lineHeight: 1.45, color: '#374151', fontWeight: 600, display: 'flex', alignItems: 'flex-start', gap: '0.4rem' }}>
+                      <span style={{ color: '#2563EB', fontWeight: 900, lineHeight: 1 }}>•</span>
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            </div>
           </div>
 
           {/* Column 2: EDUCATION → */}
@@ -123,7 +202,7 @@ const ExperienceEducationAchievements = () => {
                 letterSpacing: '0.04em'
               }}
             >
-              EDUCATION →
+              🎓 EDUCATION →
             </h3>
 
             {/* Timeline Item */}
@@ -159,23 +238,40 @@ const ExperienceEducationAchievements = () => {
               />
 
               {/* Degree & Institute */}
-              <h4 style={{ fontFamily: 'var(--font-heading)', fontSize: '0.98rem', fontWeight: 900, color: '#121212', lineHeight: 1.2 }}>
-                B.Tech in Information Technology
+              <h4 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.02rem', fontWeight: 900, color: '#121212', lineHeight: 1.2 }}>
+                B.E in Information Technology
               </h4>
-              <div style={{ fontSize: '0.82rem', fontWeight: 800, color: '#4B5563', margin: '0.15rem 0' }}>
-                Prof. Ram Meghe Institute, Amravati
+              <div style={{ fontSize: '0.84rem', fontWeight: 800, color: '#4B5563', margin: '0.2rem 0' }}>
+                Prof. Ram Meghe Institute of Technology and Research (PRMIT&R), Amravati
               </div>
-              <div style={{ fontSize: '0.74rem', fontWeight: 700, color: '#6B7280', marginBottom: '0.65rem' }}>
-                2022 – 2026
+              
+              {/* Year & CGPA Badge */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.75rem', marginTop: '0.35rem' }}>
+                <span style={{ fontSize: '0.76rem', fontWeight: 800, color: '#6B7280' }}>
+                  2022 – 2026
+                </span>
+                <span 
+                  style={{
+                    backgroundColor: '#ECFDF5',
+                    color: '#047857',
+                    border: '1.5px solid #10B981',
+                    borderRadius: '4px',
+                    padding: '0.1rem 0.45rem',
+                    fontSize: '0.72rem',
+                    fontWeight: 900
+                  }}
+                >
+                  8.86 CGPA
+                </span>
               </div>
 
               {/* Description */}
               <p style={{ fontSize: '0.84rem', lineHeight: 1.55, color: '#374151', fontWeight: 500 }}>
-                Building strong foundation in CS, AI/ML & modern technologies.
+                Building a rigorous foundation in Computer Science, Artificial Intelligence, Machine Learning & production full-stack engineering.
               </p>
 
               {/* Graduation Cap Doodle Icon with Gentle Float */}
-              <div className="animate-float" style={{ textAlign: 'right', marginTop: '0.75rem' }}>
+              <div className="animate-float" style={{ textAlign: 'right', marginTop: '1rem' }}>
                 <svg width="45" height="34" viewBox="0 0 45 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M22.5 5L3 14L22.5 23L42 14L22.5 5Z" stroke="#121212" strokeWidth="2.2" fill="#FFFFFF" strokeLinejoin="round"/>
                   <path d="M10 18V26C10 26 14 30 22.5 30C31 30 35 26 35 26V18" stroke="#121212" strokeWidth="2.2" fill="none" strokeLinecap="round"/>
@@ -201,7 +297,7 @@ const ExperienceEducationAchievements = () => {
                   margin: 0
                 }}
               >
-                ACHIEVEMENTS →
+                🏆 ACHIEVEMENTS →
               </h3>
 
               {/* Red Star Doodle with Twinkle */}
@@ -212,40 +308,33 @@ const ExperienceEducationAchievements = () => {
               </div>
             </div>
 
-            {/* 3 Trophy Badges in Row with Hover Spring */}
+            {/* 4 Trophy Badges in a 2x2 Grid */}
             <div 
               style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(3, 1fr)',
+                gridTemplateColumns: 'repeat(2, 1fr)',
                 gap: '0.85rem'
               }}
             >
-              {/* Achievement 1 */}
+              {/* Achievement 1: Winner SRIJAN'26 */}
               <motion.div 
-                whileHover={{ scale: 1.08, y: -4 }}
+                whileHover={{ scale: 1.06, y: -3 }}
                 transition={{ duration: 0.15 }}
                 style={{
                   backgroundColor: '#FAF5EB',
                   border: '2px solid #121212',
-                  borderRadius: '6px',
-                  padding: '0.85rem 0.4rem',
+                  borderRadius: '8px',
+                  padding: '0.85rem 0.6rem',
                   textAlign: 'center',
                   boxShadow: '3px 3px 0 #121212',
                   cursor: 'default'
                 }}
               >
-                {/* Hand-Drawn Trophy Illustration */}
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ margin: '0 auto 0.35rem auto' }}>
-                  <path d="M8 6H24V14C24 18.4 20.4 22 16 22C11.6 22 8 18.4 8 14V6Z" fill="#FFE500" stroke="#121212" strokeWidth="2" strokeLinejoin="round"/>
-                  <path d="M8 8H4C3 8 2 9 2 10V11C2 13.8 4.2 16 7 16H8" stroke="#121212" strokeWidth="2" strokeLinecap="round"/>
-                  <path d="M24 8H28C29 8 30 9 30 10V11C30 13.8 27.8 16 25 16H24" stroke="#121212" strokeWidth="2" strokeLinecap="round"/>
-                  <path d="M16 22V26M11 28H21" stroke="#121212" strokeWidth="2" strokeLinecap="round"/>
-                </svg>
-
-                <div style={{ fontSize: '0.76rem', fontWeight: 900, color: '#121212', lineHeight: 1.1 }}>
+                <div style={{ fontSize: '1.6rem', marginBottom: '0.2rem' }}>🏆</div>
+                <div style={{ fontSize: '0.78rem', fontWeight: 900, color: '#121212', lineHeight: 1.1 }}>
                   Winner
                 </div>
-                <div style={{ fontSize: '0.72rem', fontWeight: 900, color: '#2563EB', marginTop: '0.15rem' }}>
+                <div style={{ fontSize: '0.74rem', fontWeight: 900, color: '#2563EB', marginTop: '0.15rem' }}>
                   SRIJAN'26
                 </div>
                 <div style={{ fontSize: '0.64rem', fontWeight: 700, color: '#6B7280' }}>
@@ -253,65 +342,51 @@ const ExperienceEducationAchievements = () => {
                 </div>
               </motion.div>
 
-              {/* Achievement 2 */}
+              {/* Achievement 2: 2nd Runner Up TechSprint */}
               <motion.div 
-                whileHover={{ scale: 1.08, y: -4 }}
+                whileHover={{ scale: 1.06, y: -3 }}
                 transition={{ duration: 0.15 }}
                 style={{
                   backgroundColor: '#FAF5EB',
                   border: '2px solid #121212',
-                  borderRadius: '6px',
-                  padding: '0.85rem 0.4rem',
+                  borderRadius: '8px',
+                  padding: '0.85rem 0.6rem',
                   textAlign: 'center',
                   boxShadow: '3px 3px 0 #121212',
                   cursor: 'default'
                 }}
               >
-                {/* Trophy */}
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ margin: '0 auto 0.35rem auto' }}>
-                  <path d="M8 6H24V14C24 18.4 20.4 22 16 22C11.6 22 8 18.4 8 14V6Z" fill="#FFE500" stroke="#121212" strokeWidth="2" strokeLinejoin="round"/>
-                  <path d="M8 8H4C3 8 2 9 2 10V11C2 13.8 4.2 16 7 16H8" stroke="#121212" strokeWidth="2" strokeLinecap="round"/>
-                  <path d="M24 8H28C29 8 30 9 30 10V11C30 13.8 27.8 16 25 16H24" stroke="#121212" strokeWidth="2" strokeLinecap="round"/>
-                  <path d="M16 22V26M11 28H21" stroke="#121212" strokeWidth="2" strokeLinecap="round"/>
-                </svg>
-
-                <div style={{ fontSize: '0.72rem', fontWeight: 900, color: '#121212', lineHeight: 1.1 }}>
+                <div style={{ fontSize: '1.6rem', marginBottom: '0.2rem' }}>🥈</div>
+                <div style={{ fontSize: '0.75rem', fontWeight: 900, color: '#121212', lineHeight: 1.1 }}>
                   2nd Runner Up
                 </div>
-                <div style={{ fontSize: '0.7rem', fontWeight: 900, color: '#FF4B3A', marginTop: '0.15rem' }}>
-                  TECHSPRINT
+                <div style={{ fontSize: '0.72rem', fontWeight: 900, color: '#FF4B3A', marginTop: '0.15rem' }}>
+                  TechSprint
                 </div>
                 <div style={{ fontSize: '0.64rem', fontWeight: 700, color: '#6B7280' }}>
                   Hackathon
                 </div>
               </motion.div>
 
-              {/* Achievement 3 */}
+              {/* Achievement 3: Winner INNOVO'25 */}
               <motion.div 
-                whileHover={{ scale: 1.08, y: -4 }}
+                whileHover={{ scale: 1.06, y: -3 }}
                 transition={{ duration: 0.15 }}
                 style={{
                   backgroundColor: '#FAF5EB',
                   border: '2px solid #121212',
-                  borderRadius: '6px',
-                  padding: '0.85rem 0.4rem',
+                  borderRadius: '8px',
+                  padding: '0.85rem 0.6rem',
                   textAlign: 'center',
                   boxShadow: '3px 3px 0 #121212',
                   cursor: 'default'
                 }}
               >
-                {/* Trophy */}
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ margin: '0 auto 0.35rem auto' }}>
-                  <path d="M8 6H24V14C24 18.4 20.4 22 16 22C11.6 22 8 18.4 8 14V6Z" fill="#FFE500" stroke="#121212" strokeWidth="2" strokeLinejoin="round"/>
-                  <path d="M8 8H4C3 8 2 9 2 10V11C2 13.8 4.2 16 7 16H8" stroke="#121212" strokeWidth="2" strokeLinecap="round"/>
-                  <path d="M24 8H28C29 8 30 9 30 10V11C30 13.8 27.8 16 25 16H24" stroke="#121212" strokeWidth="2" strokeLinecap="round"/>
-                  <path d="M16 22V26M11 28H21" stroke="#121212" strokeWidth="2" strokeLinecap="round"/>
-                </svg>
-
-                <div style={{ fontSize: '0.76rem', fontWeight: 900, color: '#121212', lineHeight: 1.1 }}>
+                <div style={{ fontSize: '1.6rem', marginBottom: '0.2rem' }}>🏆</div>
+                <div style={{ fontSize: '0.78rem', fontWeight: 900, color: '#121212', lineHeight: 1.1 }}>
                   Winner
                 </div>
-                <div style={{ fontSize: '0.72rem', fontWeight: 900, color: '#10B981', marginTop: '0.15rem' }}>
+                <div style={{ fontSize: '0.74rem', fontWeight: 900, color: '#10B981', marginTop: '0.15rem' }}>
                   INNOVO'25
                 </div>
                 <div style={{ fontSize: '0.64rem', fontWeight: 700, color: '#6B7280' }}>
@@ -319,6 +394,31 @@ const ExperienceEducationAchievements = () => {
                 </div>
               </motion.div>
 
+              {/* Achievement 4: Winner Techkruti */}
+              <motion.div 
+                whileHover={{ scale: 1.06, y: -3 }}
+                transition={{ duration: 0.15 }}
+                style={{
+                  backgroundColor: '#FAF5EB',
+                  border: '2px solid #121212',
+                  borderRadius: '8px',
+                  padding: '0.85rem 0.6rem',
+                  textAlign: 'center',
+                  boxShadow: '3px 3px 0 #121212',
+                  cursor: 'default'
+                }}
+              >
+                <div style={{ fontSize: '1.6rem', marginBottom: '0.2rem' }}>🏆</div>
+                <div style={{ fontSize: '0.78rem', fontWeight: 900, color: '#121212', lineHeight: 1.1 }}>
+                  Winner
+                </div>
+                <div style={{ fontSize: '0.74rem', fontWeight: 900, color: '#8B5CF6', marginTop: '0.15rem' }}>
+                  Techkruti
+                </div>
+                <div style={{ fontSize: '0.64rem', fontWeight: 700, color: '#6B7280' }}>
+                  Hackathon
+                </div>
+              </motion.div>
             </div>
           </div>
 

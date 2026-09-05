@@ -9,7 +9,7 @@ const Contact = () => {
 
   const handleCopyEmail = (e) => {
     e.preventDefault();
-    navigator.clipboard.writeText("hello@riyaumekar.com");
+    navigator.clipboard.writeText("umekarriya9359@gmail.com");
     setCopied(true);
     setTimeout(() => setCopied(false), 2400);
   };
@@ -162,7 +162,7 @@ const Contact = () => {
                 title="Click to copy email address"
               >
                 <Mail size={19} color="#FFFFFF" />
-                <span>hello@riyaumekar.com</span>
+                <span>umekarriya9359@gmail.com</span>
                 <span 
                   style={{
                     backgroundColor: copied ? '#FFE500' : 'rgba(255,255,255,0.2)',
@@ -182,7 +182,7 @@ const Contact = () => {
               {/* LinkedIn */}
               <motion.a 
                 whileHover={{ x: 4 }}
-                href="https://linkedin.com/in/riyaumekar"
+                href="https://www.linkedin.com/in/riya-umekar-1664072a9"
                 target="_blank"
                 rel="noreferrer"
                 style={{
@@ -197,13 +197,13 @@ const Contact = () => {
                 className="cta-contact-link"
               >
                 <LinkedinIcon size={19} color="#FFFFFF" />
-                <span>linkedin.com/in/riyaumekar</span>
+                <span>linkedin.com/in/riya-umekar-1664072a9</span>
               </motion.a>
 
               {/* GitHub */}
               <motion.a 
                 whileHover={{ x: 4 }}
-                href="https://github.com/riyaumekar"
+                href="https://github.com/Riaa-stack"
                 target="_blank"
                 rel="noreferrer"
                 style={{
@@ -218,7 +218,7 @@ const Contact = () => {
                 className="cta-contact-link"
               >
                 <GithubIcon size={19} color="#FFFFFF" />
-                <span>github.com/riyaumekar</span>
+                <span>github.com/Riaa-stack</span>
               </motion.a>
 
             </div>

@@ -16,7 +16,7 @@ const promptPresets = [
   {
     id: "achievements",
     label: "🏆 Hackathon wins & highlights?",
-    response: "3x Hackathon Champion (Winner at Srijan'26, TechSprint'25, Innovo'25). Maintained 9.13 CGPA at PRMIT&R, and interned at Fireblaze AI School shipping production features!"
+    response: "4x Hackathon Champion (Winner at Srijan'26, TechSprint'25, Innovo'25, Techkruti). B.E IT '26 with 8.86 CGPA at PRMIT&R, Full Stack Developer Intern at Fireblaze AI School & AI/ML Intern at Infosys Springboard 6.0!"
   },
   {
     id: "hire",

@@ -553,28 +553,34 @@ const Hero = () => {
               )}
             </AnimatePresence>
 
-            {/* Floating Scrapbook Badge 1: B.Tech IT & CGPA */}
+            {/* Floating Scrapbook Pointer Badge: B.E IT 26, 8.86 cgpa */}
             <motion.div
               className="animate-float"
               style={{
                 position: 'absolute',
-                top: '-15px',
+                top: '-18px',
                 left: '20px',
                 backgroundColor: '#FAF5EB',
                 border: '2px dashed #121212',
-                padding: '0.35rem 0.75rem',
-                borderRadius: '4px',
+                padding: '0.4rem 0.85rem',
+                borderRadius: '6px',
                 boxShadow: '3px 3px 0 #121212',
-                fontSize: '0.72rem',
+                fontSize: '0.74rem',
                 fontWeight: 900,
                 zIndex: 12,
-                transform: 'rotate(-4deg)'
+                transform: 'rotate(-4deg)',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.4rem'
               }}
             >
-              <span style={{ color: '#2563EB' }}>✦ B.TECH IT '26</span> • <span style={{ color: '#10B981' }}>9.13 CGPA</span>
+              <span style={{ color: '#2563EB' }}>✦ B.E IT 26,</span>
+              <span style={{ color: '#10B981' }}>8.86 CGPA</span>
+              {/* Pointer indicator / arrow */}
+              <span style={{ fontSize: '0.85rem', color: '#FF4B3A', transform: 'rotate(45deg)', display: 'inline-block' }}>➤</span>
             </motion.div>
 
-            {/* Floating Scrapbook Badge 2: 3x Hackathon Winner */}
+            {/* Floating Scrapbook Badge 2: 4x Hackathon Winner */}
             <motion.div
               className="animate-float-reverse"
               style={{
@@ -596,7 +602,7 @@ const Hero = () => {
               }}
             >
               <Award size={14} color="#FF4B3A" />
-              <span>3x HACKATHON WINNER 🏆</span>
+              <span>4x HACKATHON WINNER 🏆</span>
             </motion.div>
 
           </div>
